@@ -15,6 +15,12 @@ jobs:
     name: invoke public actions
     runs-on: ubuntun-latest
     steps:
+      - name: checkout
+        uses: actions/checkout@v1
+      - name: list
+        run: |
+          pwd
+          ls
       - uses: actions/hello-world-javascript-actions@v1
         name: simple JS action
         id: greet
