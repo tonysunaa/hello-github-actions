@@ -1,5 +1,5 @@
 name: A workflow for my Hello World file
-on: push
+on: [push]
 
 jobs:
   build:
@@ -11,6 +11,17 @@ jobs:
     - uses: ./action-a
       with:
         MY_NAME: "Mona"
+  run-github-action:
+    name: invoke public actions
+    runs-on: ubuntun-latest
+    steps:
+      - uses: actions/hello-world-javascript-actions@v1
+        name: simple JS action
+        id: greet
+        with:
+          who-to-greet: John
+      - name: Log Greeting Time
+        run: echo "${{ steps.greet.outputs.time }}"
   run-windows-commands:
     name: windows 
     runs-on: windows-latest
