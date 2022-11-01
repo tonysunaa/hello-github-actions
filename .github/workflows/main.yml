@@ -21,13 +21,6 @@ jobs:
         run: |
           pwd
           ls
-      - uses: actions/hello-world-javascript-actions@v1
-        name: simple JS action
-        id: greet
-        with:
-          who-to-greet: John
-      - name: Log Greeting Time
-        run: echo "${{ steps.greet.outputs.time }}"
   run-windows-commands:
     name: windows 
     runs-on: windows-latest
