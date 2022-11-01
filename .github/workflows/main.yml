@@ -10,3 +10,11 @@ jobs:
     - uses: ./action-a
       with:
         MY_NAME: "Mona"
+  run-windows-commands:
+    name: windows 
+    runs-on: windows-latest
+    steps:
+      - name: Dictory PowerShell
+        runs: Get-Location
+      - name: Directory Bash
+        runs: pwd
