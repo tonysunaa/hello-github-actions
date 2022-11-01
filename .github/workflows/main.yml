@@ -15,6 +15,6 @@ jobs:
     runs-on: windows-latest
     steps:
       - name: Dictory PowerShell
-        runs: Get-Location
+        run: Get-Location
       - name: Directory Bash
-        runs: pwd
+        run: pwd
