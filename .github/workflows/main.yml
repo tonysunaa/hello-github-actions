@@ -5,7 +5,7 @@ on:
   pull_request:
     types:
       - opened
-
+  push:
 jobs:
   build:
     name: Hello world action
